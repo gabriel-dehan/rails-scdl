@@ -28,4 +28,21 @@ class MusicFinder
       end
     end
   end
+
+  def self.find_tracks(artist)
+    if artist.tracks.any?
+      artist.tracks 
+    else
+      tracks = client.get("/users/#{artist.soundcloud_id}/tracks")
+
+      tracks.map do |track|
+        artist.tracks.create({
+          title: track["title"],
+          stream_url: track["stream_url"],
+          duration: track["duration"],
+          artwork_url: track["artwork_url"],
+        })
+      end
+    end
+  end
 end

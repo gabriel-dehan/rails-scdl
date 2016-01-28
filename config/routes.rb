@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # get '/artists/:id', to: "artists#show"
 
   resources :artists, only: [:index, :show]
-  get 'download', to: 'artists#download', as: :download
+  get '/tracks/:id/download', to: "tracks#download", as: :download
 
   # Page qui affiche les tracks d'un artiste -> Artists#show
   # The priority is based upon order of creation: first created -> highest priority.

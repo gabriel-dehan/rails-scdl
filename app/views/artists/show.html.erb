@@ -1,0 +1,34 @@
+<h1><%= @artist.full_name %>'s tracks</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+      </th>
+      <th>Name</th>
+      <th>Duration</th>
+      <th>Download</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tracks.each do |track| %>
+      <tr>
+        <td>
+          <%= image_tag track.artwork_url, height: '30px' %>
+        </td>
+        <td>
+          <%= track.title %>
+        </td>
+        <td>
+          <%= (Time.mktime(0) + track.duration / 1000).strftime("%H:%M:%S") %>
+        </td>
+        <td>
+          <%= link_to "Download", download_path(track.id) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+<!-- https://github.com/gabriel-dehan/soundcloud-downloader -->
+
+<!-- DEVISE -->
