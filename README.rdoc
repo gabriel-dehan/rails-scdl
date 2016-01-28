@@ -1,0 +1,18 @@
+https://floobits.com/gabriel-dehan/soundownload
+
+[Artists]
+  - id
+  - full_name
+  - soundcloud_id
+  - avatar_url
+  - permalink_url
+  - track_count
+
+
+[Tracks]
+  - id
+  - title
+  - artist_id
+  - duration
+  - stream_url
+  - artwork_url

@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar .container-fluid {
+	min-height: 80px;
+	background-image: url(https://developers.soundcloud.com/assets/header_bg-1d5dd02fb5d41a910766d2999eebbf73.jpg);
+
+	.navbar-nav {
+		margin-top: 15px;
+		
+		a 	{
+			color: white;
+		}
+	}
+}
+
+.table .artist {
+  td { vertical-align: middle; }
+  a { color: #f50; font-weight: bold;}
+
+  .soundcloud {
+    vertical-align: top;
+    margin-left: 15px;
+
+    a {
+      font-size: 3em;   
+      line-height: 1em;
+      margin-top: -5px;
+      display: block;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
